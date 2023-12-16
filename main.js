@@ -16,7 +16,7 @@ p.catch(message => {
 
     let o = new Promise((resolve, reject) => {
       // Simulating an asynchronous operation (e.g., fetching data from an API)
-      setTimeout(() => {
+     
         let x = Math.random()
         const shouldSucceed = x >= 0.5; 
         console.log(x)
@@ -29,7 +29,7 @@ p.catch(message => {
           // Simulating an error
           reject(new Error('Failed to fetch data'));
         }
-      }, 2000); // Simulating a delay of 2 seconds
+      // Simulating a delay of 2 seconds
     });
   
   

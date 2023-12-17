@@ -44,3 +44,6 @@ p.catch(message => {
       // Handle errors if the Promise is rejected
     });
   
+
+
+    // use effect whenever a value in the array changes within the use effect function the use effect word runs appropriately

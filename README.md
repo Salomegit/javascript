@@ -15,6 +15,10 @@ Simply look for Quokka.js in the extensions and install it.
 
 To start Quokka simply go to the command palette.
 
-Then type Quokka start
+Then type Quokka start,select in current folder
+
+Then boom 💥 you are all set.
+
+![Alt text](quokka.png)
 
 

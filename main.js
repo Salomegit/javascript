@@ -201,6 +201,6 @@
     //spread out original object needs to be first when trying to override its properties
 
     const{title,author,genres} = book;
-    const newBook = `${title}`
+    const newBook = `${title} is the title of this book`
     console.log(newBook);
     

@@ -1,4 +1,4 @@
-# javascript
+# Vanilla Javascript
 This repo is mainly for testing out javascript via the browser.
 
 By going to the index.html file and opening it as a live server.
@@ -20,5 +20,9 @@ Then type Quokka start,select in current folder
 Then boom 💥 you are all set.
 
 ![Alt text](quokka.png)
+
+The output is also being displayed on the js files you are working on as sown below
+
+![Alt text](image.png)
 
 

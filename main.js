@@ -188,19 +188,80 @@
       return data;
     }
     
-
+    
     //object destructuring
     
     function getBook(id) {
       return data.find((d) => d.id === id);
     }
+    /*
+    const booksss = getBooks()
     const book  =  getBook(1) ;
-    const title1 = book.title;
-    console.log(title1)
-
+    const newBook11 = getBooks();
+    newBook11;
+   
     //spread out original object needs to be first when trying to override its properties
 
-    const{title,author,genres} = book;
-    const newBook = `${title} is the title of this book`
+    const{title,author,genres,pages} = book;
+
+    const pagesRange = pages > 1000 ? "book is above 1000 pages" : "book is below 1000 pages";
+
+    const newBook = `${title} is the title of this book and it has ${pages} pages`
     console.log(newBook);
     
+
+
+    const newBook1 = { id: 6,
+      title:"new title",
+      author:"Sally",
+      pages:2011 
+      
+    }
+
+
+    const allbooks = [...newBook11,newBook1]
+    console.log(allbooks)
+
+
+    const afterDeletionArray = allbooks.map((b)=>b.id === 3?{...newBook11,pages:1234} : newBook11)
+    afterDeletionArray
+
+    const array = ["4","2","3","3","4"]
+
+    const newArr = array.filter((  n )=>(n!=3))
+    newArr
+    array
+
+
+    const sortedArray = newBook11.slice().sort((a,b)=>b.pages-a.pages);
+
+    const newArray = [
+      {
+        id: 1,
+        name: "sally"
+      },
+      {
+        id: 2,
+        name: "mag"
+      }
+    ];
+    
+    const item = {
+      id: 3,
+      name: "sally"
+    };
+    
+    const add = [...newArray, item];
+    
+    console.log(add);
+    */
+
+
+
+    console.log(
+      
+
+      fetch('https://jsonplaceholder.typicode.com/todos') 
+      .then(console.log((res)=>res.json()))
+    
+    )

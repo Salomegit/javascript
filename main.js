@@ -258,10 +258,21 @@
 
 
 
-    console.log(
       
 
-      fetch('https://jsonplaceholder.typicode.com/todos') 
-      .then(console.log((res)=>res.json()))
+    //   fetch('https://jsonplaceholder.typicode.com/todos') 
+    //   .then((res)=>res.json())
+    //   .then((data)=>{console.log(data)})
     
-    )
+    
+    // console.log("love")
+
+
+
+      async function getInfo() {
+        const res = await fetch('https://jsonplaceholder.typicode.com/todos') 
+        const data = await res.json();
+        console.log(data)
+      }
+
+      getInfo();

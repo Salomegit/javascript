@@ -257,21 +257,72 @@
     */
 
 
-    async function getInfo() {
-      const res = await fetch('https://jsonplaceholder.typicode.com/todos') 
-      const data = await res.json();
-      console.log(data)
-    }
+    // async function getInfo() {
+    //   const res = await fetch('https://jsonplaceholder.typicode.com/todos') 
+    //   const data = await res.json();
+    //   console.log(data)
+    // }
 
-    getInfo();
+    // getInfo();
 
       
 
-      fetch('https://jsonplaceholder.typicode.com/todos') 
-      .then((res)=>res.json())
-      .then((data)=>{console.log(data)})
+    //   fetch('https://jsonplaceholder.typicode.com/todos') 
+    //   .then((res)=>res.json())
+    //   .then((data)=>{console.log(data)})
     
     
-    console.log("love")
+    // console.log("love")
+
+  //   fetch("https://catfact.ninja/fact")
+  //   .then(res => res.json())
+  //  .then(data => {console.log(data);})
+  //  .catch(error => { console.error('Error fetching data:', error); });
+  
+  
 
 
+   const fetchData = async () => {
+    try {
+      const response = await fetch("https://catfact.ninja/fact");
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+  
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+  
+  // Call the asynchronous function
+  fetchData();
+  const url = 'https://moviesminidatabase.p.rapidapi.com/movie/id/90/cast/';
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': '501b5caf30msh289b3cadd5be8a0p1ce435jsn2834b3f742cb',
+      'X-RapidAPI-Host': 'moviesminidatabase.p.rapidapi.com'
+    }
+  };
+  
+  const displayResult = (data) => {
+    const movieCastInfoElement = document.getElementById('movieCastInfo');
+    movieCastInfoElement.textContent = data;
+  };
+  
+  const fetchDataa = async () => {
+    try {
+      const response = await fetch(url, options);
+      const result = await response.text();
+      displayResult(result);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  
+  // Call the asynchronous function to fetch data and display it in the frontend
+  fetchDataa();
+  
